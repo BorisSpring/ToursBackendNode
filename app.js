@@ -19,6 +19,7 @@ const bookingRouter = require('./routes/bookingRouter');
 
 const app = express();
 
+// start express
 app.use(
   cors({
     origin: 'http://localhost:5173',
