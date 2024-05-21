@@ -1,0 +1,93 @@
+[
+  {
+    "_id": "5c8a1d5b0190b214360dc057",
+    "name": "Boris Dimitrijevic",
+    "email": "admin@hotmail.com",
+    "role": "admin",
+    "active": true,
+    "photo": "3.jpg",
+    "password": "bokica123",
+    "passwordConfirm": "bokica123"
+  },
+  {
+    "_id": "5c8a1dfa2f8fb814b56fa181",
+    "name": "Lourdes Browning",
+    "email": "user@hotmail.com",
+    "role": "user",
+    "active": true,
+    "photo": "user-2.jpg",
+    "password": "bokica123",
+    "passwordConfirm": "bokica123"
+  },
+  {
+    "_id": "5c8a1e1a2f8fb814b56fa182",
+    "name": "Sophie Louise Hart",
+    "email": "user1@hotmail.com",
+
+    "role": "user",
+    "active": true,
+    "photo": "user-3.jpg",
+    "password": "bokica123",
+    "passwordConfirm": "bokica123"
+  },
+  {
+    "_id": "5c8a1ec62f8fb814b56fa183",
+    "name": "Ayla Cornell",
+    "email": "user2@hotmail.com",
+    "role": "user",
+    "active": true,
+    "photo": "user-4.jpg",
+    "password": "bokica123",
+    "passwordConfirm": "bokica123"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa184",
+    "name": "Leo Gillespie",
+    "email": "leo@example.com",
+    "role": "guide",
+    "active": true,
+    "photo": "user-5.jpg",
+    "password": "bokica123",
+    "passwordConfirm": "bokica123"
+  },
+  {
+    "_id": "5c8a1f4e2f8fb814b56fa185",
+    "name": "Jennifer Hardy",
+    "email": "jennifer@example.com",
+    "role": "guide",
+    "active": true,
+    "photo": "user-6.jpg",
+    "password": "bokica123",
+    "passwordConfirm": "bokica123"
+  },
+  {
+    "_id": "5c8a201e2f8fb814b56fa186",
+    "name": "Kate Morrison",
+    "email": "kate@example.com",
+    "role": "guide",
+    "active": true,
+    "photo": "user-7.jpg",
+    "password": "bokica123",
+    "passwordConfirm": "bokica123"
+  },
+  {
+    "_id": "5c8a20d32f8fb814b56fa187",
+    "name": "Eliana Stout",
+    "email": "eliana@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "user-8.jpg",
+    "password": "bokica123",
+    "passwordConfirm": "bokica123"
+  },
+  {
+    "_id": "5c8a211f2f8fb814b56fa188",
+    "name": "Cristian Vega",
+    "email": "chris@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "user-9.jpg",
+    "password": "bokica123",
+    "passwordConfirm": "bokica123"
+  }
+]
