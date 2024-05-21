@@ -9,6 +9,7 @@ const hpp = require(`hpp`);
 const cors = require('cors');
 const path = require('path');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 
 const AppError = require('./utils/appError');
 const ErrorController = require('./controllers/errorController');
@@ -64,6 +65,8 @@ app.use(
     ],
   })
 );
+
+app.use(compression());
 
 if (process.env.ENV_NODE == 'development') {
   app.use(morgan('dev'));

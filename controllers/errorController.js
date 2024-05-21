@@ -17,7 +17,6 @@ const sendErrorProduction = (err, res) => {
     res.status(500).json({
       status: 'Error',
       mesage: 'Something went very wrong!',
-      stack: err.stack,
     });
   }
 };
