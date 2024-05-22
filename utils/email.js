@@ -14,21 +14,19 @@ module.exports = class Email {
     var transport;
     if (process.env.ENV_NODE === 'production') {
       transport = nodemailer.createTransport({
-        host: '',
-        port: '',
+        service: 'SendGrid',
         auth: {
-          user: '',
-          pass: '',
+          user: process.env.SEND_GRID_USERNAME,
+          pass: process.env.SEND_GRID_PASS,
         },
       });
     } else {
       transport = nodemailer.createTransport({
-        // service
-        host: 'sandbox.smtp.mailtrap.io',
-        port: 2525,
+        host: process.env.EMAIL_HOST,
+        port: process.env.EMAIL_PORT,
         auth: {
-          user: 'e2f3c47e010096',
-          pass: 'a86b71d0b84b74',
+          user: process.env.EMAIL_USERNAME,
+          pass: process.env.EMAIL_PASSWORD,
         },
       });
     }
@@ -58,6 +56,8 @@ module.exports = class Email {
   }
 
   async sendPasswordReset() {
+    console.log('sending email for reste token');
+    console.log(this.url);
     await this.send(
       'passwordReset',
       `Forgot your password? 
