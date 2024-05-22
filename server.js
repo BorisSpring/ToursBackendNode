@@ -13,7 +13,7 @@ process.on('uncaughtException', (err) => {
   server.close(() => process.exit(1));
 });
 
-const server = app.listen(port, 'localhost', () => {
+const server = app.listen(port, '0.0.0.0', () => {
   console.log(`Server listening on port ${port}`);
 });
 
