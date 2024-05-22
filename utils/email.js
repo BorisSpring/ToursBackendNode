@@ -56,8 +56,6 @@ module.exports = class Email {
   }
 
   async sendPasswordReset() {
-    console.log('sending email for reste token');
-    console.log(this.url);
     await this.send(
       'passwordReset',
       `Forgot your password? 
