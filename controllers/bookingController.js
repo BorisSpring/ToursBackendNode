@@ -9,19 +9,19 @@ const factory = require('./handlerFactory');
 
 exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   const tour = await Tour.findById(req.params.tourId);
-
   if (!tour) {
     return next(
       new AppError(`Tour with id ${req.params.tourId} doesnt exists!`, 400)
     );
   }
+  const requestUrl = req.get('origin');
 
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     mode: 'payment',
     // success_url: `http://localhost:5173/account/bookings?tour=${req.params.tourId}&user=${req.user.id}&price=${tour.price}`,
-    success_url: `http://localhost:5173/account/bookings?payment=success`,
-    cancel_url: `http://localhost:5173/account/bookings?payment=error`,
+    success_url: `${requestUrl}/account/bookings?payment=success`,
+    cancel_url: `${requestUrl}/account/bookings?payment=error`,
     customer_email: req.user.email,
     client_reference_id: req.params.tourId,
     line_items: [
@@ -48,7 +48,6 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
 
 exports.createBookingCheckout = catchAsync(async (req, res, next) => {
   const { user, tour, price } = req.body;
-
   //this is temporary
   if (!user || !tour || !price) {
     return next(new AppError('Missing body parts!', 400));
@@ -92,4 +91,5 @@ exports.getMeBookings = catchAsync(async (req, res, next) => {
 });
 
 exports.getAllBookingAdmin = factory.findAll(Booking);
+
 exports.deleteBooking = factory.deleteOne(Booking);

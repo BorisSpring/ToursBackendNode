@@ -6,7 +6,6 @@ mongoose.connect(process.env.database).then(() => {
 });
 
 const port = process.env.PORT || 3000;
-
 process.on('uncaughtException', (err) => {
   console.error(`Err name: ${err.name}`);
   console.error(err.message);
